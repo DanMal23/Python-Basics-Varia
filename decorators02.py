@@ -1,3 +1,5 @@
+#function decorators
+
 def decor1(func):
     def wrapper():
         print("**************************")
@@ -40,7 +42,7 @@ distro('ArcoLinux', 'Fedora29', 'SilverBlue', 'Ubuntu')
 
 #-------------------------------------------------------
 
-# decorating a method
+# method decorators
 
 def decor(meth):
     def wr (self, discount): #self as 1st arg in methods
