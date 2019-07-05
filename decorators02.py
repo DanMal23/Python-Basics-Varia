@@ -31,14 +31,15 @@ def decor(func):
         print('Some Linux distros: ', ', '.join(setx))
         func(*args)
     return wr
+    
 @decor
 def distro(*distros):
     arr=[]
     for x in distros:
         arr.append(str(x))
-    print ('My favourate : ', ', '.join(arr))
+    print ('My favourate: ', ', '.join(arr))
             
-distro('ArcoLinux', 'Fedora29', 'SilverBlue', 'Ubuntu')
+distro('ArcoLinux', 'Fedora', 'SilverBlue', 'Ubuntu')
 
 #-------------------------------------------------------
 
@@ -64,3 +65,54 @@ price = 12
 pricex = 10
 i = Item()
 i.getPrice(price/2)
+
+#------------------------------------------------------
+# **kwargs, for loop: unpacking kwargs
+
+def decor(func):
+    def wr(*args, **kwargs):
+        print("Wrapper's arguments:")
+        if args:
+            print("args->",args)
+        elif kwargs:
+            print("kwargs->",kwargs)
+        func(*args, **kwargs)
+    return wr
+
+@decor 
+def funcK(**kwargs):
+	for k,v in kwargs.items():
+		print(k,v)
+funcK(a=97, b=98, c=99)
+
+#-----------------------------------------------------
+def decor(func):
+    def wr(*args):
+        print("About document-oriented databases:")      
+        func(*args)
+    return wr
+
+class NoSQL(object):
+    def __init__ (self):
+        self.n = 'NoSQL databases'
+        self.doc = 'document-oriented db'
+        self.s = 'subclass'
+        self.xml = 'xml databases'
+        self.r = 'relational databases'
+        self.t = 'tables'
+        
+    @decor
+    def description(self, n='',doc='',s='',xml=''):
+        print("One of the main categories of {0} is {1}.\nIts {2} is {3}."
+              .format(self.n, self.doc, self.s, self.xml))
+    @decor
+    def description2(self, doc='', r='', t=''):
+        print("The {0} are juxtopposed to {1} which store data in {2}."
+             .format(self.doc, self.r, self.t))
+        
+no = NoSQL()
+no.description()
+no.description2()
+
+#based on very helpful tutorial:
+#https://gist.github.com/Zearin/2f40b7b9cfc51132851a
