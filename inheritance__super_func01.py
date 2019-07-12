@@ -48,8 +48,9 @@ class Delivery(Sales_DataMart):
         super().__init__(product_id)
         self.date = delivery_date
         self.address = delivery_address
+        
     def delivery_info(self):
-        print("Delivery  on: ", self.date, "at address: ", self.address)
+        print("Product id: ", self.get_id(),", delivery  on: ", self.date, "at address: ", self.address)
         
 s1 = Sales_DataMart("011")
 print("Sales id:", s1.get_id())
@@ -62,7 +63,6 @@ sup1.supplier_info()
 o = Office("5050", "Perth Street 8")
 o.office_info()
 d = Delivery("011", "7/7/2019","Green Street 10")
-print("Product id: ",d.get_id())
 d.delivery_info()
 
 
