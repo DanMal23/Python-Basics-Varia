@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 # coding: utf-8
-# jupyter notebook
 
 # 3-dim list
 a = [[[1,2],[3,4],5], [6,7]]
