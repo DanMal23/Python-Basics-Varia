@@ -7,6 +7,15 @@ print(tuple1[:-2]) # (1, 2, 3, 4)
 print(tuple1[-2:]) # (5, 6)
 print(tuple1[-1:]) # (6,)
 print(tuple1[:-1]) # (1, 2, 3, 4, 5)
+#reversed order of elements in the output:
+print(tuple1[::-1]) # (6, 5, 4, 3, 2, 1)
+
+tup2=(0,1,2,3,4,5,6,7,8,9,10)
+print(tup2[::-2])  # (10, 8, 6, 4, 2, 0)
+print(tup2[::2]) # (0, 2, 4, 6, 8, 10)
+print(tup2[1::2]) # (1, 3, 5, 7, 9)
+print(tup2[4::2]) # (4, 6, 8, 10)
+print(tup2[4::-1]) # (4, 3, 2, 1, 0)
 
 
 # 'tuple' object does not support item assignment
