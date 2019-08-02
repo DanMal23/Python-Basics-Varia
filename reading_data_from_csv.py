@@ -4,7 +4,7 @@
 
 # min, max, - at line number and value of salination at value of min or max of herring's length
 import csv
-with open('/home/d/Documents/workspaces/files/herrings.csv', 'r') as f:
+with open('~/Documents/workspaces/files/herrings.csv', 'r') as f:
     reader = csv.reader(f)
     values=[]
     next(reader)           
@@ -33,7 +33,7 @@ print("-----------------------------------------------------")
 
 # number of columns,rows, names of comumns
 import csv
-with open('/home/danuta/Documents/workspaces/files/herrings.csv', 'r') as f:
+with open('~/Documents/workspaces/files/herrings.csv', 'r') as f:
     reader = csv.reader(f)
     # columns
     column_num = len(header) #num of columns
@@ -57,7 +57,7 @@ print("-----------------------------------------------------")
 
 # min/max 'total yearly catch in a region, col [10]-'cumf'
 import csv
-with open('/home/d/Documents/workspaces/files/herrings.csv', 'r') as f:
+with open('~/Documents/workspaces/files/herrings.csv', 'r') as f:
     reader = csv.reader(f)
     values=[]
     next(reader)
@@ -85,7 +85,7 @@ print("-----------------------------------------------------")
 
 # enumerating headers:
 import csv
-with open('/home/d/Documents/workspaces/files/herrings.csv', 'r') as f:
+with open('~/Documents/workspaces/files/herrings.csv', 'r') as f:
     reader = csv.reader(f)  
     i = next(reader)
     print(list(enumerate(i)))
@@ -96,7 +96,7 @@ print("-----------------------------------------------------")
 
 # enumerating headers with DictReader:
 import csv
-with open('/home/d/Documents/workspaces/files/herrings.csv', 'r') as f:
+with open('~/Documents/workspaces/files/herrings.csv', 'r') as f:
     reader = csv.DictReader(f)    
     headers = reader.fieldnames
     list_headers = list(enumerate(headers))
